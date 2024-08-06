@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0e8f2;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: #4a8d3e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #3a6d2e;
+        }
+        .fact {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minecraft Fun Facts</h1>
+    <button onclick="displayFact()">Show Random Fact</button>
+    <div id="factDisplay" class="fact"></div>
+
+    <script>
+        // Array of Minecraft facts
+        const minecraftFacts = [
+            "Minecraft was created by Markus Persson, also known as Notch.",
+            "The game was officially released on November 18, 2011.",
+            "Minecraft's world is made up of 3D blocks representing various materials.",
+            "The game's name is derived from the words 'mine' and 'craft'.",
+            "Minecraft has sold over 200 million copies across all platforms as of 2023.",
+            "In Minecraft, the color of a sheep’s wool can be changed by dyeing it.",
+            "Creepers were originally a coding error that turned into one of the most iconic enemies.",
+            "Minecraft has a 'Creative Mode' where players can fly and have unlimited resources.",
+            "There are more than 60 million monthly players of Minecraft around the world.",
+            "Minecraft was acquired by Microsoft in 2014 for $2.5 billion."
+        ];
+
+        // Function to display a random fact
+        function displayFact() {
+            // Get a random index
+            const randomIndex = Math.floor(Math.random() * minecraftFacts.length);
+            // Display the fact
+            document.getElementById('factDisplay').innerText = minecraftFacts[randomIndex];
+        }
+    </script>
+</body>
+</html>
